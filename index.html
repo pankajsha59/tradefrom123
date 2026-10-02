@@ -10,43 +10,45 @@
             --secondary: #111;
             --background: #fff;
             --text-color: #555;
-            --accent: #eaeaea;
+            --accent: #eef2fe;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
             background-color: var(--background);
-            color: var(--secondary);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
         .container {
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 40px 20px;
+            text-align: center;
         }
 
-        .profile-img {
+        .profile-pic {
             width: 120px;
             height: 120px;
-            border-radius: 50%;
             background-color: var(--accent);
+            border-radius: 50%;
             margin: 0 auto 20px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: 48px;
-            font-weight: bold;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 700;
             color: var(--primary);
         }
 
         h1 {
+            color: var(--secondary);
             font-size: 32px;
             margin-bottom: 8px;
             font-weight: 700;
@@ -61,7 +63,6 @@
         }
 
         .bio {
-            color: var(--text-color);
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 40px;
@@ -81,106 +82,85 @@
             border-radius: 12px;
             padding: 24px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 16px;
             align-items: center;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .service-info {
-            text-align: left;
         }
 
         .service-title {
-            font-weight: 600;
-            font-size: 18px;
-            margin-bottom: 8px;
-            display: block;
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 20px;
         }
 
         .service-description {
-            color: var(--text-color);
             font-size: 14px;
-            line-height: 1.4;
-            max-width: 320px;
+            color: var(--text-color);
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .service-price {
-            font-weight: 600;
-            font-size: 18px;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--secondary);
         }
 
         .btn-book {
             background-color: var(--primary);
-            color: white;
-            border-radius: 24px;
-            padding: 12px 24px;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            transition: opacity 0.2s ease;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.2s ease;
+            display: inline-block;
         }
 
         .btn-book:hover {
-            opacity: 0.9;
+            background-color: #0056b3;
         }
 
-        footer {
+        .footer {
             margin-top: 60px;
-            color: #999;
             font-size: 12px;
+            color: #aaa;
         }
 
-        .disclaimer {
-            font-size: 12px;
-            color: #888;
-            line-height: 1.4;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        @media (max-width: 480px) {
-            .service-card {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 16px;
-            }
-            .btn-book {
-                width: 100%;
-                text-align: center;
-            }
+        @media (max-width: 600px) {
+            h1 { font-size: 28px; }
+            .btn-book { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="profile-img">PK</div>
-        <h1>Pankaj Kumar</h1>
-        <a href="#" class="handle">@tradefrom123</a>
-        
-        <p class="bio">Expert in Indian stock market trading, specializing in IPO allotments, Fibonacci swing setups, and custom stock screening frameworks.</p>
+<div class="container">
+    <div class="profile-pic">PK</div>
+    <h1>Pankaj Kumar</h1>
+    <a href="#" class="handle">@tradefrom123</a>
 
-        <div class="services">
-            <div class="service-card">
-                <div class="service-info">
-                    <span class="service-title">1:1 Video Consultation</span>
-                    <p class="service-description">60-minute video session to discuss IPO strategies, custom screening frameworks (S7/S9 breakout strategies), portfolio reviews, and trading queries.</p>
-                </div>
-                <div class="service-price">₹699</div>
-                <a href="#" class="btn-book">Book Session</a>
-            </div>
+    <p class="bio">
+        Expert in Indian stock market trading, specializing in IPO allotments, Fibonacci swing setups, and custom stock screening frameworks.
+    </p>
+
+    <div class="services">
+        <div class="service-card">
+            <span class="service-title">1:1 Video Consultation</span>
+            <span class="service-price">₹699</span>
+            <span class="service-description">
+                60-minute video session to discuss IPO strategies, custom screening frameworks (S7/S9 breakout strategies), portfolio reviews, and trading queries.
+            </span>
+            <a href="upi://pay?pa=paytmqr2810050501014i2q69i5lw14@paytm&am=699&cu=INR&tn=Verified" class="btn-book">Book Session</a>
         </div>
-
-        <footer>
-             <p class="disclaimer"><strong>Disclaimer:</strong> I am not a SEBI-registered investment advisor. The information shared in these sessions regarding IPO analysis, stock screening, and technical breakout strategies is strictly for educational and informational purposes only. It does not constitute financial advice or stock recommendations. Please consult a registered financial advisor and conduct your own research before making any investments in the stock market, as trading involves significant risk.</p>
-            <p>&copy; 2026 TRADE FROM 123. All rights reserved.</p>
-        </footer>
     </div>
+
+    <div class="footer">
+        <p>Disclaimer: I am not a SEBI-registered investment advisor. The information shared in these sessions regarding IPO analysis, stock screening, and technical breakout strategies is strictly for educational and informational purposes only. It does not constitute financial advice or stock recommendations. Please consult a registered financial advisor and conduct your own research before making any investments in the stock market, as trading involves significant risk.</p>
+        <p>&copy; 2026 TRADE FROM 123. All rights reserved.</p>
+    </div>
+</div>
 
 </body>
 </html>
