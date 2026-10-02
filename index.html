@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pankaj Kumar | Trading Consultant | Consult</title>
+    <style>
+        :root {
+            --primary: #0070f3;
+            --secondary: #111;
+            --background: #fff;
+            --text-color: #555;
+            --accent: #eaeaea;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .handle {
+            color: var(--primary);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .bio {
+            color: var(--text-color);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .service-card {
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-info {
+            text-align: left;
+        }
+
+        .service-title {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .service-description {
+            color: var(--text-color);
+            font-size: 14px;
+            line-height: 1.4;
+            max-width: 320px;
+        }
+
+        .service-price {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .btn-book {
+            background-color: var(--primary);
+            color: white;
+            border-radius: 24px;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn-book:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 60px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            color: #888;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        @media (max-width: 480px) {
+            .service-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            .btn-book {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-img">PK</div>
+        <h1>Pankaj Kumar</h1>
+        <a href="#" class="handle">@tradefrom123</a>
+        
+        <p class="bio">Expert in Indian stock market trading, specializing in IPO allotments, Fibonacci swing setups, and custom stock screening frameworks.</p>
+
+        <div class="services">
+            <div class="service-card">
+                <div class="service-info">
+                    <span class="service-title">1:1 Video Consultation</span>
+                    <p class="service-description">60-minute video session to discuss IPO strategies, custom screening frameworks (S7/S9 breakout strategies), portfolio reviews, and trading queries.</p>
+                </div>
+                <div class="service-price">₹699</div>
+                <a href="#" class="btn-book">Book Session</a>
+            </div>
+        </div>
+
+        <footer>
+             <p class="disclaimer"><strong>Disclaimer:</strong> I am not a SEBI-registered investment advisor. The information shared in these sessions regarding IPO analysis, stock screening, and technical breakout strategies is strictly for educational and informational purposes only. It does not constitute financial advice or stock recommendations. Please consult a registered financial advisor and conduct your own research before making any investments in the stock market, as trading involves significant risk.</p>
+            <p>&copy; 2026 TRADE FROM 123. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
